@@ -9,7 +9,7 @@ phases:
       # Log in to Amazon ECR
      - (Get-ECRLoginCommand).Password | docker login --username AWS --password-stdin 590183844552.dkr.ecr.us-east-1.amazonaws.com
       # Define repository URI and image tag
-      - 423540459436.dkr.ecr.us-east-1.amazonaws.com/awsdevops_repo
+      - 590183844552.dkr.ecr.us-east-1.amazonaws.com/awsdevops_repo
       - IMAGE_TAG=build-$(echo $CODEBUILD_BUILD_ID | awk -F":" '{print $2}')
   build:
     commands:
